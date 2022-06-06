@@ -4,4 +4,9 @@ part of 'demo_bloc.dart';
 abstract class DemoEvent {}
 
 class LoadDemoEvent extends DemoEvent {
+
 }
+
+class NoInternetConnectionEvent extends DemoEvent {}
+
+class InternetConnectedEvent extends DemoEvent {}

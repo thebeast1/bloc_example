@@ -1,5 +1,6 @@
 import 'package:bloc_example/business_logic/bloc/counter/bloc.dart';
 import 'package:bloc_example/business_logic/bloc/demo/demo_bloc.dart';
+import 'package:bloc_example/business_logic/bloc/demo/usecase.dart';
 import 'package:bloc_example/constants.dart';
 import 'package:bloc_example/data/repository/demo_repository.dart';
 import 'package:bloc_example/data/web_services/demo_web_services.dart';
@@ -10,7 +11,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class Routes {
   final DemoBloc _demoBloc =
-      DemoBloc(demoRepository: DemoRepository(DemoWebServices()));
+      DemoBloc(demoUseCases: DemoUseCases());
 
   final CounterBloc _counterBloc = CounterBloc();
 

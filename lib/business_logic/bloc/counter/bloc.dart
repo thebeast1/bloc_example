@@ -5,10 +5,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class CounterBloc extends Bloc<CounterEvents, CounterStates> {
   int count = 0;
 
-  CounterBloc() : super(InitialCounterState()) {
+  CounterBloc() : super( InitialCounterState() )
+  {
+    // on listen to the event......
     on<IncrementCounterValue>((event, emit) async {
       emit(LoadingCounterState());
+
       emit(await _changeValue('in'));
+
     });
     on<DecrementCounterValue>((event, emit) async {
       emit(LoadingCounterState());

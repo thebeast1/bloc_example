@@ -18,3 +18,7 @@ class ErrorDemoState extends DemoState {
 
   ErrorDemoState({required this.error});
 }
+
+class NoInterNetConnectionState extends DemoState {}
+
+class InterNetConnectedState extends DemoState {}
